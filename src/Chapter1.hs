@@ -649,8 +649,7 @@ sumLast2 :: Int -> Int
 sumLast2 n =
   let pos = abs n
       lastTwo = mod pos 100
-      final = mod lastTwo 10
-      secondLast = div lastTwo 10
+      (final, secondLast) = divMod lastTwo 10
       in final + secondLast
 
 
